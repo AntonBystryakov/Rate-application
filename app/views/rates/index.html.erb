@@ -1,10 +1,6 @@
 <h1>Dollar rate</h1>
-<%@rates.each do |f|%>
-  <%=link_to f.name, rate_path(f.id) %>
-  <%=f.value %> |
-  <%= link_to "refresh", edit_rate_path(f.id) %>
-  <%= link_to "delete", rate_path(f.id), method: :delete,
-                              data: { confirm: "You sure?" } %></br>
-<%end%>
-
-<p> <%= link_to "Добавить", new_rate_path%> </p>
+<h2>
+  <%a=Time.now %>
+  <%b=@rates.second.until %>
+  <%= (a>b) ? @rates.first.value : @rates.second.value %>
+</h2>

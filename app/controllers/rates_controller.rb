@@ -14,7 +14,7 @@ class RatesController < ApplicationController
     @rate=Rate.new
   end
   def edit
-    @rate=Rate.find(params[:id])
+    @rate=Rate.find(2)
   end
   def show
     @rate=Rate.find(params[:id])
@@ -24,7 +24,7 @@ class RatesController < ApplicationController
     if @rate.update(rate_params)
       redirect_to rates_path
     else
-      redirect_to edit_rate_path
+      redirect_to root
     end
   end
   def destroy
@@ -33,6 +33,6 @@ class RatesController < ApplicationController
   end
   private
   def rate_params
-    params.require(:rate).permit(:name, :value)
+    params.require(:rate).permit(:value, :until)
   end
 end

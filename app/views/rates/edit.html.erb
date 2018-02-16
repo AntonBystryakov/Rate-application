@@ -1,9 +1,8 @@
-<h1>Rates#edit</h1>
-<p> <%=form_for @rate do |f| %>
-      <%= f.label :name  %>
-      <%= f.text_field :name  %> </br>
+<h1>Set forced rate</h1>
+    <%=form_for @rate do |f| %>
       <%= f.label :value  %>
       <%= f.text_field :value %> </br>
+      <%= f.label :until  %>
+      <%= f.datetime_field :until %> </br>
       <%= f.submit "изменить"%>
     <%end%>
-</p>
