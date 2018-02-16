@@ -1,0 +1,9 @@
+<h1>Rates#edit</h1>
+<p> <%=form_for @rate do |f| %>
+      <%= f.label :name  %>
+      <%= f.text_field :name  %> </br>
+      <%= f.label :value  %>
+      <%= f.text_field :value %> </br>
+      <%= f.submit "изменить"%>
+    <%end%>
+</p>
