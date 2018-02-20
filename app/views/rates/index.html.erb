@@ -1,6 +1,6 @@
 <h1>Dollar rate</h1>
 <h2>
-  <%a=Time.now %>
+  <%a=Time.current %>
   <%b=@rates.second.until %>
   <%= (a>b) ? @rates.first.value : @rates.second.value %>
 </h2>
